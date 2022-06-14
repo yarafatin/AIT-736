@@ -1,0 +1,33 @@
+Ideas discussed
+Classify questions and then create "insincere" model for each category
+Research more on this
+Consider this as a stretch goal
+if we cannot accomplish, add it as something we can do in future work
+
+Model types to consider
+- logic regression
+- SVM
+- Neural networks -
+    RNN, GRU......
+We will finalize this at a later time
+
+Scope -
+Compare Word and sentence embedding - This will be a better narrative
+
+Documentation for proposal (due 6/15)
+Yasser do the first edit and release by 11am 6/14-
+Josh, Brad, and Indranil will edit further
+    Josh recommended adding some blurb about this being a subjective topic.
+
+1) Josh find from Anish/Professor the hosting solution. This is required for proposal submission on 6/15
+2) Create github repo
+3) Wait for feedback from professor before taking next steps in project
+
+Assignment 1 -
+Work on it individually
+Next meeting - thursday 6/16 9pm
+Discuss and merge as one document
+
+
+Meetings in Zoom
+Chat in group text
