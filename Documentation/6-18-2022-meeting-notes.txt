@@ -1,0 +1,20 @@
+6/18 meeting notes:
+
+Assignment --
+	elbow chart - Brad
+	confusion matrix - Brad
+	cross validation - Brad
+
+	Yasser checkin code github 
+	elbow chart not needed for 1NN
+	Try to get better accuracy for condensed 1-NN - 
+
+	Documentation - 
+	Yasser first draft in github for all 4 question - 6/19 
+	Brad add above items on top of it and make further edits
+	Josh and Indranil, edit as needed after Brad is done
+
+Semester Project - 
+	wait for professor 
+	meeting placeholder on 6/25 (next saturday) 6pm 
+
