@@ -6,9 +6,12 @@
 import datetime
 import random as rd
 from statistics import mode
+from sklearn.metrics import confusion_matrix
 
 import numpy as np
 import pandas as pd
+import seaborn as sns
+import matplotlib.pylab as plt
 
 
 # KNN algorithm
@@ -92,6 +95,15 @@ def main():
     knn_best_k_accuracy(train_x, test_x, train_y, test_y, start_k, max_k)
     end_time = datetime.datetime.now()
     print('knn ended at {}. It took {} '.format(end_time, end_time - start_time))
+
+    #  show a confusion matrix
+    predicted_labels = knn_predict(train_x, train_y, test_x, 1)
+    cm = confusion_matrix(test_y, predicted_labels, normalize='true')
+    sns.set()
+    ax = sns.heatmap(cm, annot=True, fmt='.1f', linewidth=0.5, xticklabels=True, yticklabels=True)
+    plt.xlabel('True Class')
+    plt.ylabel('Predicted Class')
+    plt.show()
 
     # ####### Condensed 1NN ####################
     k = 1
