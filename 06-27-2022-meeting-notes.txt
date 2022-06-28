@@ -1,0 +1,30 @@
+
+Next Meet 6/30 7pm
+
+1) Fix per his feedback  - Yasser
+	a) Fix title  
+	b) fix cittaion  
+	c) Highlight our delta  
+		- use sentence embedding 
+	d) citation for estimates - ref #16
+	e) Add algorithms used in sentence embeddings - 
+	
+
+Next deliverable
+1) exploratory data analysis - try word cloud 
+	top phrases associated in insincere question
+	categorize them as well
+	Josh
+
+2) Use word embeddings with logistic regression, random forest
+	submit to quora to get accuracy result of test data
+	backup - get test data from training
+	
+	logistic regression - Brad
+	random forest - Indranil/Yasser
+	
+
+3) do more literature research - Josh
+	clean up and add more relevant ones
+	find if anyone has done sentence embedding based classification 
+
