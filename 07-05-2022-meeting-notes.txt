@@ -1,0 +1,12 @@
+Meeting notes from 7/5/2022:
+
+Submit developed Random Forest to Kaggle to see results - Indranil
+
+Adjust Linear Regression to Logistic Regression - Brad
+
+Papers will be saved to Git, will add commentary/response that we can add to our own paper. Also EDA - Josh
+	- Examine Indranil/Brad question regarding "Classification of Insincere Questions Using Deep Learning",
+	  seems certain performance metrics might be in error (True Pos. vs True Neg. etc)
+	
+
+Meeting: Sat 5pm, 07/09/2022
