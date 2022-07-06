@@ -48,6 +48,12 @@ def clean(message, lem=True):
 
 train = pd.read_csv('input/train.csv')
 test = pd.read_csv('input/test.csv')
+
+###To run in local fast START
+train = train.head(100000)
+###To run in local fast END
+
+print (train.shape , test.shape)
 #nltk.download('stopwords')
 nltk_stopwords = stopwords.words('english')
 
