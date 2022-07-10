@@ -1,0 +1,2 @@
+Nothing in here uses the Kaggle/Quora dataset.
+Pulled these papers in as the focus on sentence (vs. word) embedding, might be helpful in some context.

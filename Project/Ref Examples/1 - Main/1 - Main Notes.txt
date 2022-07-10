@@ -1,0 +1,4 @@
+This uses the same Kaggle dataset related to Quora questions and word embeddings. 
+
+SVM and Log Reg. for ML
+LSTM for DL
