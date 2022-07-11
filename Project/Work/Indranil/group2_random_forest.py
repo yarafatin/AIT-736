@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import SGDClassifier
 from sklearn.pipeline import Pipeline
 from sklearn import metrics
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, confusion_matrix
 
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
@@ -53,7 +53,7 @@ test = pd.read_csv('input/test.csv')
 
 ###To run in local fast START
 train = train.head(100000)
-
+#test = test.head(100000)
 ###To run in local fast END
 
 print (train.shape , test.shape)
@@ -71,15 +71,13 @@ train['question_text_cleaned'] = train.question_text.apply(lambda x: clean(x, Tr
 print('4444 ', datetime.now())
 
 
-# split  data into training and testing sets of 50:50 ratio
+# split  data into training and testing sets of 80:20 ratio
 
-# 50% of test size selected
+# 80% of test size selected
 # random_state is random seed
-X_train, X_test, y_train, y_test = train_test_split(train['question_text_cleaned'], train['target'], test_size=0.50, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(train['question_text_cleaned'], train['target'], test_size=0.80, random_state=1)
 
-print('5555 ' , datetime.now())
-
-
+print('5555 ', datetime.now())
 
 print ('Start Random Forest ')
 from sklearn.ensemble import RandomForestClassifier
@@ -97,7 +95,7 @@ vectorize_model_pipeline.fit(X_train, y_train)
 print('8888 ' , datetime.now())
 predictions2 = vectorize_model_pipeline.predict(X_test)
 
-
+print(confusion_matrix(y_test, predictions2))
 
 from tabulate import tabulate
 data = [[1, 'Accuracy', accuracy_score(y_test, predictions2)],
@@ -106,8 +104,8 @@ data = [[1, 'Accuracy', accuracy_score(y_test, predictions2)],
 [4,'Recall', recall_score(y_test, predictions2)]]
 print (tabulate(data, headers=["Serial No", "Metrice", "Score"]))
 
-confusion_matrix = metrics.confusion_matrix(y_test, predictions2)
-cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix,
+confusion_matrix_insincere = metrics.confusion_matrix(y_test, predictions2)
+cm_display = metrics.ConfusionMatrixDisplay(confusion_matrix = confusion_matrix_insincere,
                                             display_labels = [False, True])
 
 cm_display.plot()
