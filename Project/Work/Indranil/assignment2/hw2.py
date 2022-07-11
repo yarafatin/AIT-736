@@ -9,11 +9,9 @@ import pandas as pd
 
 
 
-
-training_set=[]
-weights=np.random.rand(2)
 datasetSize=100
-b=0
+training_set=[]
+
 
 def setup():
     for i in range(datasetSize):
@@ -29,7 +27,7 @@ def isPositiveTrainingY(x1, x2):
         return 1
 
 #Activation function
-def activation_function(x):
+def activation_function(x, weights, b):
     value = sum(x * weights) + b
     if value<0:
         return -1
@@ -71,10 +69,12 @@ b = 0
 
 mydict= {}
 
+weights = np.random.rand(2)
+b = 0
 for i in range(epoch):
     errorcount = 0
     for x, y in training_set:
-        error = y - activation_function(x)
+        error = y - activation_function(x, weights, b)
         if (error != 0):
             errorcount = errorcount + 1
         errors.append(error)
@@ -82,7 +82,7 @@ for i in range(epoch):
             # print(w[index])
             weights[index] += eta * error * value/100
             b += eta * error
-    print('{} iteration {} errorcount , {} . {} '.format(i, errorcount, b, weights))
+    print(' Iteration: {} :  [errorcount: {} , weights:{}, bias:{} ]'.format(i+1, errorcount, weights, b ))
     mydict[i+1]=errorcount
 
 #print(mydict)
@@ -94,7 +94,7 @@ plt.bar(range(len(mydict)), values, tick_label=names)
 plt.xticks(rotation = 90)
 plt.xlabel('iteration')
 plt.ylabel('errorcount')
-plt.title(" Count of rrors in different iteration")
+plt.title(" Count of errors in different iteration")
 plt.show(block=True)
 
 
