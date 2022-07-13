@@ -42,7 +42,7 @@ print("Pseudo inverse using np library: \n ", np.linalg.pinv(training_setA))
 ########## END OF Sample matrix
 
 ################ Housing data
-
+print ("---------------- START OPTION 2 - housing dataset ")
 #Read housing data, skip the heading row
 df_housing = pd.read_csv('house_data.csv', skiprows=1)
 df_housing.head()
