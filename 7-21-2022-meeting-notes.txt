@@ -1,0 +1,4 @@
+Wait for feedback until 11:30pm Sunday, incorporate comments and then submit
+Brad continue logisictic regression
+Drop random forest becaus it is not well with too many features
+Use DN
